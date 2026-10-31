@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Upload a course video</h1>
+<form class="upload" action="/upload" method="post" enctype="multipart/form-data">
+  <label>Admin password <input type="password" name="password" required></label>
+  <label>Course title <input type="text" name="title" required></label>
+  <label>Description <textarea name="description" rows="4"></textarea></label>
+  <label>Category <input type="text" name="category" placeholder="e.g. Machine Learning"></label>
+  <label>Tags (comma separated) <input type="text" name="tags" placeholder="python, neural networks, beginner"></label>
+  <label>Video file (.mp4, .webm, .mov, .m4v) <input type="file" name="video" accept="video/*" required></label>
+  <button type="submit">Upload</button>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="course">
+  <video controls preload="metadata" src="{{ c.video_url }}"></video>
+  <h1>{{ c.title }}</h1>
+  <p class="meta">{{ c.category }} · {{ c.views }} views · {{ c.uploaded_at.strftime('%d %b %Y') }}</p>
+  <p>{{ c.description }}</p>
+  <p>{% for t in c.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+</article>
+
+{% if related %}
+<h2>Related courses</h2>
+<div class="grid">
+  {% for r in related %}
+  <a class="card" href="/courses/{{ r.id }}">
+    <h3>{{ r.title }}</h3>
+    <p class="meta">{{ r.category }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

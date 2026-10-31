@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f6f7fb; color: #1d1d1f; }
+header { display: flex; gap: 16px; align-items: center; padding: 12px 24px; background: #fff; border-bottom: 1px solid #e3e5ec; position: sticky; top: 0; z-index: 10; }
+.brand { font-weight: 700; color: #1d1d1f; text-decoration: none; font-size: 1.2rem; }
+.search { flex: 1; position: relative; max-width: 620px; }
+.search input[type=search] { width: 100%; padding: 10px 14px; border: 1px solid #c9ccd6; border-radius: 999px; font-size: 1rem; }
+.suggest { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #e3e5ec; border-radius: 10px; margin-top: 4px; }
+.suggest:empty { display: none; }
+.sug { padding: 8px 14px; cursor: pointer; }
+.sug:hover { background: #f0f2f8; }
+.upload-link { color: #2d5bff; text-decoration: none; font-weight: 600; }
+main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { background: #fff; border-radius: 12px; padding: 16px; text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.card h3 { margin: 0 0 6px; }
+.meta { color: #6b6f7b; font-size: .9rem; }
+.tag { display: inline-block; background: #e8edff; color: #2d5bff; border-radius: 999px; padding: 2px 10px; margin: 2px; font-size: .85rem; }
+.course video { width: 100%; max-height: 520px; background: #000; border-radius: 12px; }
+.upload { display: grid; gap: 12px; max-width: 520px; }
+.upload label { display: grid; gap: 4px; font-weight: 600; font-size: .95rem; }
+.upload input, .upload textarea { padding: 8px; border: 1px solid #c9ccd6; border-radius: 8px; font: inherit; }
+.upload button { padding: 10px; border: 0; border-radius: 8px; background: #2d5bff; color: #fff; font-weight: 600; cursor: pointer; }

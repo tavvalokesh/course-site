@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{% if query %}Results for “{{ query }}”{% else %}All courses{% endif %}</h1>
+
+{% if not courses %}
+  <p>No courses found.{% if query %} Try different words.{% endif %}</p>
+{% endif %}
+
+<div class="grid">
+  {% for c in courses %}
+  <a class="card" href="/courses/{{ c.id }}">
+    <h3>{{ c.title }}</h3>
+    <p class="meta">{{ c.category }} · {{ "{:,}".format(c.views) }} views</p>
+    <p>{{ c.description[:140] }}{% if c.description|length > 140 %}…{% endif %}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}
